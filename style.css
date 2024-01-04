@@ -37,10 +37,10 @@ button {
 /* Reset Range Input */
 input[type="range"]{
     -webkit-appearance: none;
-    overflow:hidden;     /* 限定範圍 */
+    overflow:hidden;
     width:200px;
     height:20px;
-    outline : none;      /* 避免點選會有藍線或虛線 */
+    outline : none;
     background:none;
 }
 
