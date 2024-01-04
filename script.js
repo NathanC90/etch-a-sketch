@@ -10,10 +10,9 @@ let colorPicker = document.getElementById("color-picker");
 // Doodle elements
 let doodleBoard = document.getElementById("doodle-board");
 let gridSize = document.getElementById("grid-size");
-let row = gridInput.value;
-let column = gridInput.value;
 
-console.log(`Row: ${row} Column: ${column}`);
+// show initial grid size
+gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
 
 rainbowBtn.addEventListener('click', function() {
     alert("I got clicked!");
@@ -27,15 +26,7 @@ eraseBtn.addEventListener('click', function() {
     alert("Erase button is clicked!");
 })
 gridInput.addEventListener('input', function(){
-    gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
+    let row = gridInput.value;
+    let column = gridInput.value;
+    gridSize.textContent = `${row} x ${column}`;
 })
-gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
-
-function setGridSize(row, column){
-    for(let i = 0; i < row; i++) {
-        doodleBoard.innerHTML += `<div class="newGrid"></div>`;
-        for(let j = 0; j < column; j++) {
-            doodleBoard.innerHTML += `<div class="newGrid"></div>`;
-        }
-    }
-}
