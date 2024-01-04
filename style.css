@@ -12,8 +12,20 @@ body {
     width: 450px;
     height: 450px;
     border: 2px solid var(--border-color);
-    margin: 10px auto;
+    margin: 10px;
     display: flex;
+}
+
+#container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+#function-area {
+    display: flex;
+    flex-direction: column;
 }
 
 button {
