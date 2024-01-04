@@ -19,3 +19,6 @@ gridInput.addEventListener('input', function(){
     gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
 })
 gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
+
+let colorPicker = document.getElementById("color-picker");
+console.log(colorPicker.value)
