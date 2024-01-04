@@ -15,5 +15,7 @@ blackBtn.addEventListener('click', function() {
 eraseBtn.addEventListener('click', function() {
     alert("Erase button is clicked!");
 })
-
+gridInput.addEventListener('input', function(){
+    gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
+})
 gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
