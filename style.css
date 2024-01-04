@@ -33,14 +33,72 @@ button {
     border: 2px solid transparent;
     border-image: linear-gradient(to bottom right, violet 0%, indigo 14%, blue 28%, green 42%, yellow 56%, orange 71%, red 100%);
     border-image-slice: 1;
-  }
+}
+/* Reset Range Input */
+input[type="range"]{
+    -webkit-appearance: none;
+    overflow:hidden;     /* 限定範圍 */
+    width:200px;
+    height:20px;
+    outline : none;      /* 避免點選會有藍線或虛線 */
+    background:none;
+}
 
-  #color-picker {
+/* Chrome, Safari, Opera, and Edge styles */
+input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    border: 1px solid #31304D;
+    border-radius: 10px;
+    background: #31304D;
+}
+  
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: -6px;
+    background: #B6BBC4;
+}
+
+/* Firefox styles */
+/* slider track */
+input[type="range"]::-moz-range-track{
+    height: 4px;
+    background: #B6BBC4;
+    border: none;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb{
+    width: 10px;
+    height: 10px;
+    background: #B6BBC4;
+    border: none;
+    border-radius: 50%;
+}
+  
+input[type="range"]::-moz-range-thumb:hover,input[type="range"]:active::-moz-range-thumb{
+    width: 16px;
+    height: 16px;
+}
+/* slider progress */
+input[type="range"]::-moz-range-progress{
+    height: 4px;
+    background:#31304D;
+}
+
+/* Remove default focus */
+input[type="range"]::-moz-focus-outer{
+    border: none;
+}
+
+#color-picker {
     width: 50px;
     height: 30px;
     border: none;
-  }
+}
 
-  .newGrid {
+.newGrid {
     border: 1px solid black;
-  }
+}
