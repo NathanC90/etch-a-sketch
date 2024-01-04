@@ -11,24 +11,25 @@ body {
 #doodle-board {
     width: 450px;
     height: 450px;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     margin: 10px auto;
 }
 
 button {
     background: white;
-    border: 1px solid var(--border-color);
+    border: 2px solid var(--border-color);
     padding: 10px 20px;
     border-radius: 5px;
     margin: 5px;
     font-family: 'Rubik Doodle Shadow', system-ui, Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 #rainbow-btn {
     background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     border-image: linear-gradient(to bottom right, violet 0%, indigo 14%, blue 28%, green 42%, yellow 56%, orange 71%, red 100%);
     border-image-slice: 1;
   }
