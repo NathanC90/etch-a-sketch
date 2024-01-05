@@ -7,6 +7,7 @@ let clearBtn = document.getElementById("clear-btn");
 // Input elements
 let gridInput = document.getElementById("grid-input");
 let colorPicker = document.getElementById("color-picker");
+let colorCode = document.getElementById("color");
 
 // Doodle elements
 let doodleBoard = document.getElementById("doodle-board");
@@ -15,6 +16,8 @@ let newGrid = document.querySelectorAll(".newGrid");
 
 // show initial grid size
 gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
+
+colorCode.textContent += colorPicker.value;
 
 rainbowBtn.addEventListener('click', function() {
     alert("I got clicked!");
