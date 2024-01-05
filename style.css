@@ -39,7 +39,7 @@ button {
     border: 2px solid var(--border-color);
     padding: 10px 20px;
     border-radius: 5px;
-    margin: 5px;
+    margin: 5px 5px 10px 5px;
     font-family: 'Rubik Doodle Shadow', system-ui, Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -111,10 +111,46 @@ input[type="range"]::-moz-focus-outer{
     border: none;
 }
 
-#color-picker {
-    width: 50px;
-    height: 30px;
-    border: none;
+/* color picker  styles*/
+#swatch{
+    background: white;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, .1);
+    margin: 10px auto;
+}
+  
+input[type="color"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    height: 5em;
+    padding: 0;
+    width: 5em;
+}
+  
+*:focus{
+    border-radius: 0;
+    outline: none;
+}
+  
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+  
+::-webkit-color-swatch{
+    border: 0;
+    border-radius: 0;
+}
+  
+::-moz-color-swatch,
+::-moz-focus-inner{
+    border: 0;
+}
+  
+::-moz-focus-inner{
+    padding: 0;
 }
 
 .newGrid {
