@@ -8,6 +8,10 @@ body {
     color: var(--text-color);
 }
 
+#title {
+    font-size: 3em;
+}
+
 #doodle-board {
     width: 450px;
     height: 450px;
@@ -26,6 +30,8 @@ body {
 #function-area {
     display: flex;
     flex-direction: column;
+    margin-left: -180px;
+    margin-right: 20px;
 }
 
 button {
@@ -50,8 +56,8 @@ button {
 input[type="range"]{
     -webkit-appearance: none;
     overflow:hidden;
-    width:200px;
-    height:20px;
+    width: 150px;
+    height: 20px;
     outline : none;
     background:none;
 }
