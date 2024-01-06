@@ -52,6 +52,24 @@ button {
     border-image: linear-gradient(to bottom right, violet 0%, indigo 14%, blue 28%, green 42%, yellow 56%, orange 71%, red 100%);
     border-image-slice: 1;
 }
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#rainbow-btn:hover{
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    animation:slidebg 5s linear infinite;
+}
+
+@keyframes slidebg {
+    to {
+      background-position:20vw;
+    }
+}
+
 /* Reset Range Input */
 input[type="range"]{
     -webkit-appearance: none;
@@ -194,8 +212,6 @@ input[type="color"] {
         width: 115px;
     }
   }
-
-
 
   @media screen and (max-width: 710px) {
     #doodle-board {
