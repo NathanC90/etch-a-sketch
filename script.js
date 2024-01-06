@@ -1,13 +1,14 @@
 // Button elements
+let colorBtn = document.getElementById("color-btn");
 let rainbowBtn = document.getElementById("rainbow-btn");
-let blackBtn = document.getElementById("black-btn");
 let eraseBtn = document.getElementById("erase-btn");
 let clearBtn = document.getElementById("clear-btn");
 
 // Input elements
 let gridInput = document.getElementById("grid-input");
 let colorPicker = document.getElementById("color-picker");
-let currentColor = document.getElementById("color");
+let hex = document.getElementById("hex");
+let currentColor = colorPicker.value;
 
 // Doodle elements
 let doodleBoard = document.getElementById("doodle-board");
@@ -17,7 +18,7 @@ let gridSize = document.getElementById("grid-size");
 gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
 
 // show default color
-currentColor.textContent = colorPicker.value;
+hex.textContent = colorPicker.value;
 
 // show current color
 colorPicker.addEventListener('input', function(){
@@ -34,15 +35,25 @@ function setRandomColors(){
             elem.style.backgroundColor = `#${randomColor}`
         })
     };
-    
+}
+
+// set the color as current color
+function setCurrentColor(){
+    let newGrid = document.querySelectorAll(".newGrid");
+
+    for (let elem of newGrid) {
+        elem.addEventListener('mouseenter', () => {
+          elem.style.backgroundColor = `${colorPicker.value}`
+        })
+      };
 }
 
 rainbowBtn.addEventListener('click', function() {
-    setRandomColors()
+    setRandomColors();
 })
 
-blackBtn.addEventListener('click', function() {
-    alert("black button is clicked!");
+colorBtn.addEventListener('click', function() {
+    setCurrentColor();
 })
 
 eraseBtn.addEventListener('click', function() {
