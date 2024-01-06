@@ -169,12 +169,29 @@ input[type="color"] {
         width: 380px;
         height: 380px;
     }
+
+    #function-area {
+        width: 150px;
+    }
+
+    input[type="range"]{
+        width: 140px;
+    }
   }
 
   @media screen and (max-width: 776px) {
     #doodle-board {
         width: 320px;
         height: 320px;
+    }
+
+    #function-area {
+        width: 120px;
+    }
+
+
+    input[type="range"]{
+        width: 115px;
     }
   }
 
