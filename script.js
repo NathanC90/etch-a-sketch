@@ -24,6 +24,7 @@ hex.textContent = colorPicker.value;
 // show current color
 colorPicker.addEventListener('input', function(){
     hex.textContent = colorPicker.value;
+    setCurrentColor();
 });
 
 // show current grid size
@@ -62,7 +63,6 @@ function setCurrentColor(){
         })
       };
 }
-
 
 // remove background color
 function eraseColor(){
