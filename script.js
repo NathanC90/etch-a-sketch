@@ -7,7 +7,7 @@ let clearBtn = document.getElementById("clear-btn");
 // Input elements
 let gridInput = document.getElementById("grid-input");
 let colorPicker = document.getElementById("color-picker");
-let colorCode = document.getElementById("color");
+let currentColor = document.getElementById("color");
 
 // Doodle elements
 let doodleBoard = document.getElementById("doodle-board");
@@ -17,7 +17,13 @@ let newGrid = document.querySelectorAll(".newGrid");
 // show initial grid size
 gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
 
-colorCode.textContent += colorPicker.value;
+// show default color
+currentColor.textContent = colorPicker.value;
+
+// show current color
+colorPicker.addEventListener('input', function(){
+    currentColor.textContent = colorPicker.value;
+});
 
 rainbowBtn.addEventListener('click', function() {
     alert("I got clicked!");
@@ -30,6 +36,8 @@ blackBtn.addEventListener('click', function() {
 eraseBtn.addEventListener('click', function() {
     alert("Erase button is clicked!");
 })
+
+//show current grid size
 gridInput.addEventListener('input', function(){
     let row = gridInput.value;
     let column = gridInput.value;
