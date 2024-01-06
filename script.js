@@ -12,7 +12,6 @@ let currentColor = document.getElementById("color");
 // Doodle elements
 let doodleBoard = document.getElementById("doodle-board");
 let gridSize = document.getElementById("grid-size");
-let newGrid = document.querySelectorAll(".newGrid");
 
 // show initial grid size
 gridSize.textContent = `${gridInput.value} x ${gridInput.value}`;
@@ -25,8 +24,21 @@ colorPicker.addEventListener('input', function(){
     currentColor.textContent = colorPicker.value;
 });
 
+// generate random colors
+function setRandomColors(){
+    let newGrid = document.querySelectorAll(".newGrid");
+    
+    for (let elem of newGrid) {
+        elem.addEventListener('mouseenter', () => {
+            let randomColor = Math.floor(Math.random() * 16777215).toString(16)
+            elem.style.backgroundColor = `#${randomColor}`
+        })
+    };
+    
+}
+
 rainbowBtn.addEventListener('click', function() {
-    alert("I got clicked!");
+    setRandomColors()
 })
 
 blackBtn.addEventListener('click', function() {
