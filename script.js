@@ -23,7 +23,7 @@ hex.textContent = colorPicker.value;
 
 // show current color
 colorPicker.addEventListener('input', function(){
-    currentColor.textContent = colorPicker.value;
+    hex.textContent = colorPicker.value;
 });
 
 // show current grid size
@@ -39,8 +39,6 @@ gridInput.addEventListener('input', function(){
 // show default grid size
 doodleBoard.style.gridTemplateColumns = `repeat(${numberOfGrids} ,1fr)`;
 setGridSize(numberOfGrids);
-
-
 
 // generate random colors
 function setRandomColors(){
