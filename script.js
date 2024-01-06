@@ -26,15 +26,19 @@ colorPicker.addEventListener('input', function(){
     currentColor.textContent = colorPicker.value;
 });
 
-//show current grid size
+// show current grid size
 gridInput.addEventListener('input', function(){
     let row = gridInput.value;
     let column = gridInput.value;
+    numberOfGrids = gridInput.value;
     gridSize.textContent = `${row} x ${column}`;
+    updateGridSize(numberOfGrids);
+    console.log(numberOfGrids);
 })
 
 // show default grid size
-setGridSize(numberOfGrids)
+doodleBoard.style.gridTemplateColumns = `repeat(${numberOfGrids} ,1fr)`;
+setGridSize(numberOfGrids);
 
 
 
@@ -61,7 +65,9 @@ function setCurrentColor(){
       };
 }
 
-function eraseColors(){
+
+// remove background color
+function eraseColor(){
     let newGrid = document.querySelectorAll(".newGrid");
 
     for (let elem of newGrid) {
@@ -83,7 +89,7 @@ colorBtn.addEventListener('click', function() {
 
 // Click to set to Erase Mode
 eraseBtn.addEventListener('click', function() {
-    eraseColors();
+    eraseColor();
 })
 
 // Click to remove all background colors
@@ -93,11 +99,23 @@ clearBtn.addEventListener('click', function(){
     });
 });
 
-// Rearrange grid size
+// default grid size
 function setGridSize(num) {
     for(let i = 0; i < num * num; i++) {
         let newGrid = document.createElement('div');
         newGrid.className = "newGrid";
         doodleBoard.appendChild(newGrid);
     }
+}
+
+// Update grid size
+function updateGridSize(num) {
+    doodleBoard.innerHTML = '';
+    for(let i = 0; i < num * num; i++) {
+        let newGrid = document.createElement('div');
+        newGrid.className = "newGrid";
+        doodleBoard.appendChild(newGrid);
+    }
+    doodleBoard.style.gridTemplateColumns = `repeat(${numberOfGrids} ,1fr)`;
+    doodleBoard.style.gridTemplateRows = `repeat(${numberOfGrids} ,1fr)`;
 }
