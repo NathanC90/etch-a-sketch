@@ -48,6 +48,16 @@ function setCurrentColor(){
       };
 }
 
+function eraseColors(){
+    let newGrid = document.querySelectorAll(".newGrid");
+
+    for (let elem of newGrid) {
+        elem.addEventListener('mouseenter', () => {
+            elem.style.backgroundColor = "";
+        })
+    }
+}
+
 rainbowBtn.addEventListener('click', function() {
     setRandomColors();
 })
@@ -57,7 +67,7 @@ colorBtn.addEventListener('click', function() {
 })
 
 eraseBtn.addEventListener('click', function() {
-    alert("Erase button is clicked!");
+    eraseColors();
 })
 
 //show current grid size
