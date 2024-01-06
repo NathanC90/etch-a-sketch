@@ -10,3 +10,5 @@ An overview of the instructions is listed below:
    * Tip: Set the limit for the user input to a maximum of 100. A larger number of squares results in more computer resources being used, potentially causing delays, freezing, or crashing that we want to prevent.
   
 Regarding #3, I use a range input instead of a popup question of the number of squares.
+
+Regarding the layout, I initially tried to use Flexbox to make a dynamic 16x16 grid. However, most of the information I can find on google is using Grid instead. Therefore, I use Grid and it turns out it's quite easy to achieve what has been troubling for me for the past three days lol.
