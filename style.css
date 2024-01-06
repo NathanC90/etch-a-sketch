@@ -182,6 +182,13 @@ input[type="color"] {
     height: 100%;
 }
 
+footer {
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    padding: 20px;
+    height: 100%;
+}
+
 @media screen and (max-width: 865px) {
     #doodle-board {
         width: 380px;
