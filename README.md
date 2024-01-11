@@ -12,3 +12,5 @@ An overview of the instructions is listed below:
 Regarding #3, I use a range input instead of a popup question of the number of squares.
 
 Regarding the layout, I initially tried to use Flexbox to make a dynamic 16x16 grid. However, most of the information I can find on google is using Grid instead. Therefore, I use Grid and it turns out it's quite easy to achieve what has been troubling for me for the past three days lol.
+
+Live Demo: [Here](https://nathanc90.github.io/etch-a-sketch/)
